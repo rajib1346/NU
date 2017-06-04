@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+		xmlns:f="http://xmlns.jcp.org/jsf/core">
+    	<h1>8th Semester</h1>
+	                      
+				
+                                 <p:menubar>	
+				
+			            
+                                 
+                                    <p:menuitem value="Download Notes" ajax="true" update="@form" onsuccess="updateHistory('Starter', 'index.jsf?content=8thNote')"
+                                                actionListener="#{contentMBean.setPage('8thNote')}" />
+                                   
+						
+                                   </p:menubar>	
+						
+                               
+                                  
+   <h:form>
+            <h2>Calculate Your 8th Semester GPA</h2>
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="CSE[421]:Web Engineering:"></h:outputText>
+                <h:selectOneMenu value="#{eightSgpa.swe}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 <h:outputText value="CSE[422]:Web Engineering Practical:"></h:outputText>
+                 <h:selectOneMenu value="#{eightSgpa.swep}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[423]:Computer and Network Security:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.scms}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[424|425|426|427]:Elective Course:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.ses}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                  <h:outputText value="CSE[499]:Project:"></h:outputText>
+                  <h:selectOneMenu value="#{eightSgpa.sp}">
+                    <f:selectItems value="#{eightSgpa.allgrade}"></f:selectItems>
+                </h:selectOneMenu>
+                 
+                 
+                  <h:commandButton value="submit" actionListener="#{eightSgpa.page(eightSgpa.swe,eightSgpa.swep,eightSgpa.scms,eightSgpa.ses,eightSgpa.sp)}">
+                      <f:ajax execute="@form" render="sgpa"></f:ajax>
+                  </h:commandButton>
+                  <h:outputLabel value="#{eightSgpa.total}" id="sgpa"></h:outputLabel>
+            </h:panelGrid>
+        </h:form>
+  
+  
+	<div class="footersection template clear">
+	
+	     
+	     <p>&copy; NU CSE Home</p>
+	</div>  
+        
+  
+</ui:composition>
+
