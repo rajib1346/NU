@@ -9,7 +9,6 @@ package org.joinfaces.example.view;
  *
  * @author Acer
  */
-
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -31,20 +30,16 @@ import org.primefaces.model.StreamedContent;
 @ManagedBean
 
 public class tabelElement {
-  
-    private String location,locationlink,notification;
 
-     public String getLocationlink() {
+    private String location, locationlink, notification;
+
+    public String getLocationlink() {
         return locationlink;
     }
 
     public void setLocationlink(String locationlink) {
         this.locationlink = locationlink;
     }
-    
-  
-
-    
 
     public String getLocation() {
         return location;
@@ -54,13 +49,12 @@ public class tabelElement {
         this.location = location;
     }
 
-  public String getNotification() {
+    public String getNotification() {
         return notification;
     }
 
     public void setNotification(String notification) {
         this.notification = notification;
-    } 
+    }
 
-    
 }

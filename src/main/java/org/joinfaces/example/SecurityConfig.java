@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.joinfaces.example;
 
 import java.util.Arrays;
@@ -38,23 +37,20 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Override
-	protected void configure(HttpSecurity http) {
-		try {
-			http.csrf().disable();
-			http
-				.userDetailsService(userDetailsService())
-				.authorizeRequests()
-				.antMatchers("/").permitAll()
-				.antMatchers("/index.jsf").permitAll()
-				.antMatchers("/javax.faces.resource/**").permitAll();
-			        	
-				
-		}
-		catch (Exception ex) {
-			throw new RuntimeException(ex);
-		}
-	}
+    @Override
+    protected void configure(HttpSecurity http) {
+        try {
+            http.csrf().disable();
+            http
+                    .userDetailsService(userDetailsService())
+                    .authorizeRequests()
+                    .antMatchers("/").permitAll()
+                    .antMatchers("/index.jsf").permitAll()
+                    .antMatchers("/javax.faces.resource/**").permitAll();
 
-	
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
 }

@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.joinfaces.example;
 
 import org.junit.Test;
@@ -26,8 +25,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = JoinFacesExampleApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class JoinFacesExampleApplicationIT {
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }

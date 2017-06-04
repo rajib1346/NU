@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.joinfaces.example.view;
 
 import org.springframework.stereotype.Controller;
@@ -23,13 +22,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Redirect to index.jsf SPA.
+ *
  * @author Marcelo Fernandes
  */
 @Controller
-public class RedirectToIndexController  {
+public class RedirectToIndexController {
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String redirect() {
-		return "redirect:index.jsf";
-	}
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String redirect() {
+        return "redirect:index.jsf";
+    }
 }

@@ -7,88 +7,88 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
-      
-      
-    <h:body style="background: #3371FF">
-          
-               <h2>3rd Semester Note</h2>
-                                  
-        <h:form>
-		
-		
-                <h:panelGrid columns="2"> 
-			
-			
-			       <h:dataTable value="#{thirdSemesterNote.getLocation()}" var="u"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-    <f:facet name = "header" >Hand Notes</f:facet>    	
-            
-            <h:column>
-           
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
-         
-            
-           
-                      
-                   
-            
-           
-            </h:dataTable> 
-                 <h:dataTable value="#{thirdSemesterNote.getLink()}" var="v"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-                   <f:facet name = "header" >Download Here</f:facet>    	
-            
-            <h:column>
-                <h:outputLink value="#{v.locationlink}">Download Here</h:outputLink>
-               
-               
-            </h:column>
-            
-         
-            
-           
-                      
-                   
-            
-           
-            </h:dataTable> 
-			
-			
-	  
-    </h:panelGrid>                   
 
-</h:form>
-	            <h:form id="two" style="margin-top: 10px">
-            
-       
-                
-                <h:dataTable value="#{thirdSemesterNote.getNoti()}" var="n"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-    <f:facet name = "header" >Recent News For You</f:facet>    	
-            
-            <h:column>
-                <h:outputText value="#{n.notification}" style="color: red"></h:outputText>
-               
-               
-            </h:column>
-            
-         
-            
-           
-                      
-                   
-            
-           
+
+    <h:body style="background: #3371FF">
+
+        <h2>3rd Semester Note</h2>
+
+        <h:form>
+
+
+            <h:panelGrid columns="2"> 
+
+
+                <h:dataTable value="#{thirdSemesterNote.getLocation()}" var="u"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                    <f:facet name = "header" >Hand Notes</f:facet>    	
+
+                    <h:column>
+
+                        <h:outputLabel value = "#{u.location}"
+
+                                       />
+
+                    </h:column>
+
+
+
+
+
+
+
+
+                </h:dataTable> 
+                <h:dataTable value="#{thirdSemesterNote.getLink()}" var="v"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                    <f:facet name = "header" >Download Here</f:facet>    	
+
+                    <h:column>
+                        <h:outputLink value="#{v.locationlink}">Download Here</h:outputLink>
+
+
+                    </h:column>
+
+
+
+
+
+
+
+
+                </h:dataTable> 
+
+
+
+            </h:panelGrid>                   
+
+        </h:form>
+        <h:form id="two" style="margin-top: 10px">
+
+
+
+            <h:dataTable value="#{thirdSemesterNote.getNoti()}" var="n"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                <f:facet name = "header" >Recent News For You</f:facet>    	
+
+                <h:column>
+                    <h:outputText value="#{n.notification}" style="color: red"></h:outputText>
+
+
+                </h:column>
+
+
+
+
+
+
+
+
             </h:dataTable>                  
 
-</h:form>    
-	    <div class="footersection template clear">
-	
-	     
-	     <p>&copy; NU CSE Home</p>
-	</div>  
-	    
+        </h:form>    
+        <div class="footersection template clear">
+
+
+            <p>&copy; NU CSE Home</p>
+        </div>  
+
     </h:body>
 </html>

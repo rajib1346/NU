@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.joinfaces.example;
 
 import org.junit.Test;
@@ -22,9 +21,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 public class SecurityConfigIT {
 
-	@Test(expected = RuntimeException.class)
-	public void exceptionOnConfigureNull() {
-		new SecurityConfig().configure((HttpSecurity) null);
-	}
+    @Test(expected = RuntimeException.class)
+    public void exceptionOnConfigureNull() {
+        new SecurityConfig().configure((HttpSecurity) null);
+    }
 
 }

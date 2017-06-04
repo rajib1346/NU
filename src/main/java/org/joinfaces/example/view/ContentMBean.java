@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.joinfaces.example.view;
 
 import java.io.Serializable;
@@ -28,6 +27,7 @@ import lombok.Setter;
 
 /**
  * Content Page.
+ *
  * @author Marcelo Fernandes
  */
 @Setter
@@ -36,18 +36,17 @@ import lombok.Setter;
 @ViewScoped
 public class ContentMBean implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private String page;
+    private String page;
 
-	@PostConstruct
-	public void init() {
-		String initPage = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("content");
-		if (initPage != null && !initPage.trim().isEmpty()) {
-			page = initPage;
-		}
-		else {
-			page = "starter";
-		}
-	}
+    @PostConstruct
+    public void init() {
+        String initPage = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap().get("content");
+        if (initPage != null && !initPage.trim().isEmpty()) {
+            page = initPage;
+        } else {
+            page = "starter";
+        }
+    }
 }

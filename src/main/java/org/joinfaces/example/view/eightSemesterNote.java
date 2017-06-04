@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package org.joinfaces.example.view;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,13 +29,16 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.model.SelectItem;
+
 @ManagedBean
 @SessionScoped
 public class eightSemesterNote {
-     private String selectedname;
-private Scanner x;
 
-String line;
+    private String selectedname;
+    private Scanner x;
+
+    String line;
+
     public String getSelectedname() {
         return selectedname;
     }
@@ -51,28 +55,26 @@ String line;
         return list;
     }
 
-    public List<tabelElement> getLocation() throws  FileNotFoundException, IOException {
-         
+    public List<tabelElement> getLocation() throws FileNotFoundException, IOException {
 
         List<tabelElement> list = new ArrayList<tabelElement>();
-       //  BufferedReader br=null;
+        //  BufferedReader br=null;
 
-      //  br=new BufferedReader(new FileReader("C:\\Users\\Acer\\Documents\\NetBeansProjects\\NuCseHome\\text"));
-      
+        //  br=new BufferedReader(new FileReader("C:\\Users\\Acer\\Documents\\NetBeansProjects\\NuCseHome\\text"));
 //        Class.forName("com.mysql.jdbc.Driver");
 //        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fast", "root", "");
 //
 //        Statement stmt = con.createStatement();
 //        ResultSet rs = stmt.executeQuery("select id,location,fileName,Author,size from " + selectedname + "");
- URL oracle = new URL("http://shawonislam.com/rajib/eightnote.txt");
-    BufferedReader in = new BufferedReader(
-    new InputStreamReader(oracle.openStream()));
+        URL oracle = new URL("http://shawonislam.com/rajib/eightnote.txt");
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(oracle.openStream()));
 
-    String inputLine;
-        while((inputLine = in.readLine()) != null) {
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
             tabelElement element = new tabelElement();
-              
-           // element.setId(rs.getString("id"));
+
+            // element.setId(rs.getString("id"));
             element.setLocation(inputLine);
 //            element.setLocation(rs.getString("location"));
 //            element.setAuthor(rs.getString("Author"));
@@ -83,19 +85,20 @@ String line;
 
         return list;
     }
- public List<tabelElement> getLink() throws  FileNotFoundException, IOException {
+
+    public List<tabelElement> getLink() throws FileNotFoundException, IOException {
 
         List<tabelElement> listlink = new ArrayList<tabelElement>();
- 
- URL oracle = new URL("http://shawonislam.com/rajib/eightlink.txt");
-    BufferedReader in = new BufferedReader(
-    new InputStreamReader(oracle.openStream()));
 
-    String inputLine;
-        while((inputLine = in.readLine()) != null) {
+        URL oracle = new URL("http://shawonislam.com/rajib/eightlink.txt");
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
             tabelElement elementlink = new tabelElement();
-              
-           // element.setId(rs.getString("id"));
+
+            // element.setId(rs.getString("id"));
             elementlink.setLocationlink(inputLine);
 //            element.setLocation(rs.getString("location"));
 //            element.setAuthor(rs.getString("Author"));
@@ -106,27 +109,27 @@ String line;
 
         return listlink;
     }
-        public List<tabelElement> getNoti() throws  FileNotFoundException, IOException {
+
+    public List<tabelElement> getNoti() throws FileNotFoundException, IOException {
 
         List<tabelElement> listnoti = new ArrayList<tabelElement>();
-       //  BufferedReader br=null;
+        //  BufferedReader br=null;
 
-      //  br=new BufferedReader(new FileReader("C:\\Users\\Acer\\Documents\\NetBeansProjects\\NuCseHome\\text"));
-      
+        //  br=new BufferedReader(new FileReader("C:\\Users\\Acer\\Documents\\NetBeansProjects\\NuCseHome\\text"));
 //        Class.forName("com.mysql.jdbc.Driver");
 //        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fast", "root", "");
 //
 //        Statement stmt = con.createStatement();
 //        ResultSet rs = stmt.executeQuery("select id,location,fileName,Author,size from " + selectedname + "");
- URL oracle = new URL("http://shawonislam.com/rajib/eightnoti.txt");
-    BufferedReader in = new BufferedReader(
-    new InputStreamReader(oracle.openStream()));
+        URL oracle = new URL("http://shawonislam.com/rajib/eightnoti.txt");
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(oracle.openStream()));
 
-    String inputLine;
-        while((inputLine = in.readLine()) != null) {
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
             tabelElement notification = new tabelElement();
-              
-           // element.setId(rs.getString("id"));
+
+            // element.setId(rs.getString("id"));
             notification.setNotification(inputLine);
 //            element.setLocation(rs.getString("location"));
 //            element.setAuthor(rs.getString("Author"));
@@ -137,5 +140,5 @@ String line;
 
         return listnoti;
     }
-   
+
 }

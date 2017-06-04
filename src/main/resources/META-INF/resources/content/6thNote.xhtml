@@ -7,66 +7,66 @@
     <h:head>
         <title>Facelet Title</title>
     </h:head>
-      
-      
-    <h:body style="background: #3371FF">
-          
-               <h2>5th Semester Note</h2>
-                                  
-        <h:form>
-		
-		
-                <h:panelGrid columns="2"> 
-			
-			
-			       <h:dataTable value="#{sixSemesterNote.getLocation()}" var="u"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-    <f:facet name = "header" >Hand Notes</f:facet>    	
-            
-            <h:column>
-           
-               <h:outputLabel value = "#{u.location}"
-                            
-                   />
-               
-            </h:column>
-            
-         
-            
-           
-                      
-                   
-            
-           
-            </h:dataTable> 
-                 <h:dataTable value="#{sixSemesterNote.getLink()}" var="v"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
-                   <f:facet name = "header" >Download Here</f:facet>    	
-            
-            <h:column>
-                <h:outputLink value="#{v.locationlink}">Download Here</h:outputLink>
-               
-               
-            </h:column>
-            
-         
-            
-           
-                      
-                   
-            
-           
-            </h:dataTable> 
-			
-			
-	  
-    </h:panelGrid>                   
 
-</h:form>
-	    
-	    <div class="footersection template clear">
-	
-	     
-	     <p>&copy; NU CSE Home</p>
-	</div>  
-	    
+
+    <h:body style="background: #3371FF">
+
+        <h2>5th Semester Note</h2>
+
+        <h:form>
+
+
+            <h:panelGrid columns="2"> 
+
+
+                <h:dataTable value="#{sixSemesterNote.getLocation()}" var="u"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                    <f:facet name = "header" >Hand Notes</f:facet>    	
+
+                    <h:column>
+
+                        <h:outputLabel value = "#{u.location}"
+
+                                       />
+
+                    </h:column>
+
+
+
+
+
+
+
+
+                </h:dataTable> 
+                <h:dataTable value="#{sixSemesterNote.getLink()}" var="v"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                    <f:facet name = "header" >Download Here</f:facet>    	
+
+                    <h:column>
+                        <h:outputLink value="#{v.locationlink}">Download Here</h:outputLink>
+
+
+                    </h:column>
+
+
+
+
+
+
+
+
+                </h:dataTable> 
+
+
+
+            </h:panelGrid>                   
+
+        </h:form>
+
+        <div class="footersection template clear">
+
+
+            <p>&copy; NU CSE Home</p>
+        </div>  
+
     </h:body>
 </html>
