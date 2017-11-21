@@ -109,5 +109,34 @@ public class fourthSemesterNote {
 
         return listlink;
     }
+   public List<tabelElement> getNoti() throws FileNotFoundException, IOException {
 
+        List<tabelElement> listnoti = new ArrayList<tabelElement>();
+        //  BufferedReader br=null;
+
+        //  br=new BufferedReader(new FileReader("C:\\Users\\Acer\\Documents\\NetBeansProjects\\NuCseHome\\text"));
+//        Class.forName("com.mysql.jdbc.Driver");
+//        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fast", "root", "");
+//
+//        Statement stmt = con.createStatement();
+//        ResultSet rs = stmt.executeQuery("select id,location,fileName,Author,size from " + selectedname + "");
+        URL oracle = new URL("http://shawonislam.com/rajib/fourthnoti.txt");
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(oracle.openStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null) {
+            tabelElement notification = new tabelElement();
+
+            // element.setId(rs.getString("id"));
+            notification.setNotification(inputLine);
+//            element.setLocation(rs.getString("location"));
+//            element.setAuthor(rs.getString("Author"));
+//            element.setSize(rs.getString("size"));
+
+            listnoti.add(notification);
+        }
+
+        return listnoti;
+}
 }
