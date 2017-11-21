@@ -61,7 +61,30 @@
             </h:panelGrid>                   
 
         </h:form>
+          
+   <h:form id="two" style="margin-top: 10px">
 
+
+
+            <h:dataTable value="#{fourthSemesterNote.getNoti()}" var="n"  border="2" style=" margin: auto;height: 180;background:#fff ;color:darkgray azure;text-align: center">
+                <f:facet name = "header" >Recent News For You</f:facet>    	
+
+                <h:column>
+                    <h:outputText value="#{n.notification}" style="color: red"></h:outputText>
+
+
+                </h:column>
+
+
+
+
+
+
+
+
+            </h:dataTable>                  
+
+</h:form> 
         <div class="footersection template clear">
 
 
